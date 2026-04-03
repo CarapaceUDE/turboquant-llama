@@ -18,7 +18,7 @@ Downstream fork: **TurboQuant** KV-cache paths (CUDA) plus **GGUF / Qwen 3.5 hyb
 
 ## TurboQuant CUDA KV Cache Quantization
 
-This fork adds full CUDA support for [TurboQuant](https://arxiv.org/abs/2501.06815) (Google Research, ICLR 2026) KV cache quantization, including custom Flash Attention kernels and a tensor-core prefill path. The result: **3.5-5x KV cache compression with quality that beats q8_0**.
+This fork adds full CUDA support for [TurboQuant](https://arxiv.org/abs/2504.19874) (Google Research; see [blog](https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/)) KV cache quantization, including custom Flash Attention kernels and a tensor-core prefill path. The result: **3.5-5x KV cache compression with quality that beats q8_0**.
 
 ### What's implemented
 

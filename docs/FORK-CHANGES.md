@@ -94,7 +94,9 @@ Routine maintenance: **`git fetch upstream`** then merge **`upstream/master`** (
 
 ## TurboQuant (Google Research–style KV compression)
 
-Implemented types and training references are described in the main **[README](../README.md)** (TurboQuant section). In code, look for **`GGML_TYPE_TURBO2_0`**, **`TURBO3_0`**, **`TURBO4_0`**, **`ggml_turbo_wht`**, and CUDA flash-attention paths in **`ggml/src/ggml-cuda/`**. Paper link in README: [arXiv:2501.06815](https://arxiv.org/abs/2501.06815).
+This is a **first-order / primary implementation inside llama.cpp**: new **ggml tensor types**, **CPU reference** quant/dequant, **KV cache** integration, **CUDA** `SET_ROWS` / `GET_ROWS` / **Flash Attention vec + prefill** paths, **graph** hooks (`ggml_turbo_wht`, etc.), and (on the branch history) **Metal** support—not a thin wrapper around some external library. It is **not** Google’s own official release; it follows the published method (rotation groups, PolarQuant / Lloyd-Max centroids, QJL-style residual handling for turbo4, etc.) on top of [TheTom/llama-cpp-turboquant](https://github.com/TheTom/llama-cpp-turboquant) scaffolding, with CUDA filled in as described in **[TURBOQUANT_CUDA_IMPLEMENTATION.md](../TURBOQUANT_CUDA_IMPLEMENTATION.md)**.
+
+Implemented types and usage are also summarized in **[README](../README.md)**. Quick code pointers: **`GGML_TYPE_TURBO2_0`**, **`TURBO3_0`**, **`TURBO4_0`**, **`ggml-turbo-quant.c`**, **`ggml/src/ggml-cuda/turbo-*.cu`** / **`turbo-quant-cuda.cuh`**, **`fattn-vec-*turbo*`** instances. Paper: [arXiv:2504.19874](https://arxiv.org/abs/2504.19874) (see also [Google Research blog](https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/)).
 
 ---
 
