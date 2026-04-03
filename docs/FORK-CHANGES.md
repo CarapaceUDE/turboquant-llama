@@ -40,6 +40,8 @@ The bulk of the tree still tracks upstream llama.cpp; the intentional deltas are
 
 **Developer notes:** [tools/server/README-dev.md](../tools/server/README-dev.md)
 
+**Local launcher folder** (Windows `.cmd`, real **`models.ini`**, client JSON): not part of git by default—see **[docs/OPERATOR-RUNTIME.md](OPERATOR-RUNTIME.md)** and **[examples/models-preset/](../examples/models-preset/)** for a shareable template.
+
 ---
 
 ## Secondary patches (non–TurboQuant)

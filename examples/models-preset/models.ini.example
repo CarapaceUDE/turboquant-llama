@@ -1,0 +1,22 @@
+; Example: copy to models.ini and replace MODEL_PATH_* with real paths.
+; See tools/server README for all keys: https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md
+
+[*]
+jinja = true
+flash-attn = auto
+ngl = 99
+parallel = 2
+ctx-size = 16384
+; TurboQuant example (uncomment if your build supports it and you use FA as required):
+; cache-type-k = turbo3
+; cache-type-v = turbo3
+
+[my-model-a]
+model = MODEL_PATH_A
+alias = model-a
+
+[my-model-b]
+model = MODEL_PATH_B
+parallel = 1
+ctx-size = 32768
+alias = model-b, backup-name
