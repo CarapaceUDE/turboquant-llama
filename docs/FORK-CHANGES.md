@@ -81,7 +81,7 @@ The TurboQuant merge may also include **`tools/server/`** diffs vs stock llama.c
 - Merge of **`origin/feature/turboquant-kv-cache`**: restores full TurboQuant stack on top of that line (resolve carefully vs upstream BF16 FA, etc.).
 - **`backup/pre-upstream-merge-2026-04-03`**: tag on **`9952377d3`** only (no TurboQuant merge).
 
-Ongoing: **`git fetch upstream`**, merge **`upstream/master`**, rebuild, and re-test **turbo3/turbo4 + `-fa`** workloads. See **[docs/build.md](build.md)**.
+**Ongoing maintenance (step-by-step):** **[docs/MAINTAINING-FORK.md](MAINTAINING-FORK.md)** — remotes, canonical **`build/`** layout, merging **`upstream/master`**, conflict hotspots, and checklists.
 
 ---
 
