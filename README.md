@@ -10,6 +10,10 @@
 
 LLM inference in C/C++
 
+## This fork
+
+Downstream fork with focused changes to **GGUF loading** and **Qwen 3.5 / MoE / Next** hybrid attention graphs. **[docs/FORK-CHANGES.md](docs/FORK-CHANGES.md)** lists differences from [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) and why they exist.
+
 ## Recent API changes
 
 - [Changelog for `libllama` API](https://github.com/ggml-org/llama.cpp/issues/9289)
